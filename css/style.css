@@ -1,0 +1,210 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  font-size: 18px;
+}
+
+/*  index  */
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: auto;
+  grid-template-areas:
+    "navigation navigation navigation navigation navigation navigation"
+    "info info info info info info"
+    "cards cards cards cards cards cards"
+    "contact contact contact contact contact contact";
+}
+
+.navigation {
+  grid-area: navigation;
+  display: flex;
+  justify-content: space-around;
+  background-color: rebeccapurple;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #eee;
+  font-size: 25px;
+  padding: 25px;
+}
+
+.info {
+  grid-area: info;
+  display: flex;
+  height: 20rem;
+  color: white;
+  text-align: center;
+}
+
+.info_location {
+  background-image: url("../img/01-day.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.info_food {
+  background-image: url("../img/01-night.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.cards {
+  grid-area: cards;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(185, 152, 152);
+}
+
+.card {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  align-items: center;
+  border-radius: 4px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.contact {
+  grid-area: contact;
+  min-height: 200px;
+  background-color: rebeccapurple;
+  display: flex;
+  color: white;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Book */
+
+.container {
+  background-color: rgb(169, 165, 165);
+}
+
+.bookingdate {
+  height: 100px;
+  background-color: black;
+}
+
+.btn {
+  padding: 8px 40px 8px;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.bookingcards {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  margin: 15px;
+  padding: 8px;
+}
+
+.bookcard {
+  grid-column: auto / span 6;
+  background-color: rgb(64, 55, 55);
+  border: 5px solid white;
+  margin-top: 10px;
+  display: flex;
+  height: 200px;
+}
+
+.bookcard h2 {
+  color: white;
+  display: flex;
+  margin-right: auto;
+  width: 100%;
+  margin: 10px;
+}
+
+.bookcard h3 {
+  margin-top: auto;
+  color: red;
+}
+
+/*  About  */
+
+.facilities {
+  display: flex;
+  text-align: center;
+  background-color: rgb(185, 121, 121);
+}
+
+.facility_gym p {
+  padding: 50px;
+}
+
+.facility_skybar p {
+  background-color: red;
+}
+
+.about_start {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.about_start h1 {
+  font-size: 30px;
+}
+
+@media screen and (max-width: 900px) {
+  .navigation {
+    width: 100%;
+  }
+
+  .navigation a {
+    font-size: 15px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cards {
+    flex-direction: column;
+    padding: 25px;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+  }
+
+  .contact {
+    flex-direction: column;
+  }
+
+  .bookingdate {
+    height: 200px;
+    background-color: antiquewhite;
+  }
+  .btns {
+    flex-direction: column;
+  }
+
+  .bookingcards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .bookcard {
+    flex-direction: column;
+    height: 600px;
+    margin-top: 30px;
+  }
+}
